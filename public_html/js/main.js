@@ -1,4 +1,9 @@
 $('.tennis-slide').bxSlider({
-  infiniteLoop: false,
-  hideControlOnEnd: true
+    infiniteLoop: true,
+    nextSelector: '#slider-next',
+    prevSelector: '#slider-prev',
+    nextText: "",
+    prevText: "",
+    pager: true,
+    adaptiveHeight: true
 });
