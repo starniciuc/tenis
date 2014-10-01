@@ -483,8 +483,9 @@ table.table-price td:last-child{
 .other-info ul.more-info-list li a.xls{
     background-position: -60px 0;
 }
-.navbar-toggle{
+.navbar-header button i{
     color:#FFFFFF;
+    font-size: 20px;
 }
 @media screen and (max-width: 1200px) {
     header .nav-menu .menu li a {
