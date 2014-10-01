@@ -17,7 +17,7 @@ header .nav-menu{
     background: -ms-linear-gradient(top, #334a55 0%,#002834 45%,#002834 100%); /* IE10+ */
     background: linear-gradient(to bottom, #334a55 0%,#002834 45%,#002834 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#334a55', endColorstr='#002834',GradientType=0 ); /* IE6-9 */
-    height: 45px;
+    min-height: 45px;
     margin-top: 30px;
     border: 0;
     box-shadow: none;
@@ -515,5 +515,25 @@ table.table-price td:last-child{
     }
 }
 @media(max-width:768px){
-
+    header .nav-menu .menu{
+        width: 100%;
+        overflow: hidden;
+    }
+    .navbar-collapse{
+        overflow: hidden;
+    }
+    header .nav-menu .menu li{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    header .nav-menu .menu li a{
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    header .nav-menu .menu li a.active{
+        background: none;
+        background-color: #666;
+    }
 }
