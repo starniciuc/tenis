@@ -537,3 +537,6 @@ table.table-price td:last-child{
         background-color: #666;
     }
 }
+.modal-dialog{
+	width: 800px;
+}
