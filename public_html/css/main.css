@@ -88,6 +88,13 @@ footer .footer-side p{
 {
     width: 100%;
 }
+.view .gallery ul li a img{
+	height: 150px;
+	width: auto;
+}
+.view .gallery ul li a{
+	overflow: hidden;
+}
 .slider .callbacks_nav,
 .view .gallery .callbacks_nav,
 .modal .callbacks_nav
@@ -411,11 +418,14 @@ table.table-price td:last-child{
 .view .gallery .gallery-slide{
     padding: 0 35px;
 }
-.view .gallery .gallery-slide li a img{
+.view .gallery .gallery-slide li a{
     border-radius: 10px;
     border:1px solid #dadada;
 }
-.view .gallery .gallery-slide li a:hover img{
+.view .gallery .gallery-slide li a img{
+    min-width: 100%;
+}
+.view .gallery .gallery-slide li a:hover{
     border:1px solid #2b4550;
 }
 .view .gallery h1{
@@ -536,4 +546,7 @@ table.table-price td:last-child{
         background: none;
         background-color: #666;
     }
+}
+.modal-dialog{
+	width: 800px;
 }
