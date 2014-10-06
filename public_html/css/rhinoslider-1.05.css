@@ -1,0 +1,79 @@
+/**
+  * Rhinoslider 1.05
+  * http://rhinoslider.com/
+  *
+  * Copyright 2014: Sebastian Pontow, Rene Maas (http://renemaas.de/)
+  * Dual licensed under the MIT or GPL Version 2 licenses.
+  * http://rhinoslider.com/license/
+  */
+.rhino-btn {
+	display: block;
+    width: 40px;
+    height: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 10;
+	text-indent: -99999px;
+    background-image: url("../img/slide-arrow.png");
+    background-position: 10px center;
+    background-repeat: no-repeat;
+}
+.rhino-prev {
+	left:0px;
+	background-position: 10px center;
+}
+
+.rhino-next {
+	right:0px;
+	background-position: -24px center;
+}
+
+.rhino-prev:hover { background-color: rgba(188, 255, 0 , 0.5); }
+
+.rhino-next:hover { background-color: rgba(188, 255, 0 , 0.5); }
+#slider{
+	height: 358px;
+}
+
+.rhino-bullets {
+	outline: 0;
+	text-align: center;
+    font-size: .85em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+    padding-top: 0px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -20px;
+    z-index: 10;
+}
+
+.rhino-bullets:before, .rhino-bullets:after {
+	background-position: -11px 0px;
+}
+
+.rhino-bullets li {
+	float:left;
+	display:inline-block;
+}
+
+.rhino-bullets li a.rhino-bullet {
+	background-image: url("../img/bullet.png");
+    background-position: 3px 0px;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    display: block;
+    width: 14px;
+    height: 14px;
+}
+
+.rhino-bullets li a.rhino-bullet:hover, .rhino-bullets li a.rhino-bullet:focus {
+	background-position: -11px 0px;
+	cursor: pointer;
+}
+
+.rhino-bullets li a.rhino-bullet.rhino-active-bullet {
+	background-position: -11px 0px;
+}
