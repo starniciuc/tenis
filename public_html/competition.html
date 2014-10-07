@@ -12,8 +12,30 @@
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
+        <link href="css/rhinoslider-1.05.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
 
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="http://gtc-nvk.ru/media/skins/tennis/vendor/jquery-1.5.2.min.js" type="text/javascript"></script>
+        <script src="js/easing.js" type="text/javascript"></script>
+        <script src="js/mousewheel.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+        <script src="js/jquery.contentcarousel.js" type="text/javascript"></script>
+        <script src="js/rhinoslider-1.05.min.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+                $('#sliderModals').rhinoslider({
+                    showControls: "always",
+                    showBullets: "never",
+                    controlsPlayPause: false
+
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('#ca-container').contentcarousel();
+            });
+        </script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -99,15 +121,14 @@
                                 <div class="gallery">
                                     <h1>Фотогалерея</h1>
                                     <div class="slide-side">
-                                        <ul class="gallery-slide">
-                                            <li><a href="javascript:slideModal(0)"><img src="img/news3.png"></a></li>
-                                            <li><a href="javascript:slideModal(1)"><img src="img/news4.png"></a></li>
-                                            <li><a href="javascript:slideModal(2)"><img src="img/sport2.png"></a></li>
-                                            <li><a href="javascript:slideModal(3)"><img src="img/sport_foto_071.png"></a></li>
-                                        </ul>
-                                        <div class="outside">
-                                            <div id="slider-prev" class="callbacks_nav"></div>
-                                            <div id="slider-next" class="callbacks_nav next"></div>
+                                        <div class="gallery-slide" id="ca-container">
+                                            <div class="ca-wrapper">
+                                                <div class="ca-item"><a href="javascript:slideModal()"><img src="img/1.jpg"></a></div>
+                                                <div class="ca-item"><a href="javascript:slideModal()"><img src="img/news3.png"></a></div>
+                                                <div class="ca-item"><a href="javascript:slideModal()"><img src="img/news4.png"></a></div>
+                                                <div class="ca-item"><a href="javascript:slideModal()"><img src="img/sport2.png"></a></div>
+                                                <div class="ca-item"><a href="javascript:slideModal()"><img src="img/sport_foto_071.png"></a></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -150,25 +171,18 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="slide-side">
-                            <ul class="bxslider">
+                            <a href="javascript:closeModal()" class="closeModal">x</a>
+                            <ul class="bxslider" id="sliderModals">
+                                <li><img src="img/1.jpg"></li>
                                 <li><img src="img/news3.png"></li>
                                 <li><img src="img/news4.png"></li>
                                 <li><img src="img/sport2.png"></li>
                                 <li><img src="img/sport_foto_071.png"></li>
                             </ul>
-                            <div class="outside">
-                                <div id="slider-prev1" class="callbacks_nav"></div>
-                                <div id="slider-next1" class="callbacks_nav next"></div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.js"><\/script>')</script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/jquery.bxslider.js"></script>
-        <script src="js/main.js"></script>
     </body>
 </html>

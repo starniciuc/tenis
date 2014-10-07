@@ -31,6 +31,10 @@
 .rhino-prev:hover { background-color: rgba(188, 255, 0 , 0.5); }
 
 .rhino-next:hover { background-color: rgba(188, 255, 0 , 0.5); }
+
+.modal .rhino-prev:hover { background-color: rgba(188, 255, 0 , 0); }
+
+.modal .rhino-next:hover { background-color: rgba(188, 255, 0 , 0); }
 #slider{
 	height: 358px;
 }

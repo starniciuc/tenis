@@ -89,15 +89,17 @@ footer .footer-side p{
     width: 100%;
 }
 .view .gallery ul li a img{
-	height: 150px;
-	width: auto;
+    height: 150px;
+    width: auto;
 }
 .view .gallery ul li a{
-	overflow: hidden;
+    overflow: hidden;
 }
 .slider .callbacks_nav,
 .view .gallery .callbacks_nav,
-.modal .callbacks_nav
+.modal .callbacks_nav,
+.ca-nav-prev,
+.ca-nav-next
 {
     position: absolute;
     top: 0;
@@ -109,24 +111,34 @@ footer .footer-side p{
 }
 .slider .callbacks_nav a,
 .view .gallery .callbacks_nav a,
-.modal .callbacks_nav a
+.modal .callbacks_nav a,
+.ca-nav-prev,
+.ca-nav-next
 {
+    text-indent: -99999px;
     display: block;
     width: 40px;
     height: 100%;
     background-image: url("../img/slide-arrow.png");
     background-position: 10px center;
     background-repeat: no-repeat;
+    cursor: pointer;
+}
+.ca-nav-prev{
+    left: -10px;
 }
 .slider .callbacks_nav.next,
 .view .gallery .callbacks_nav.next,
-.modal .callbacks_nav.next
+.modal .callbacks_nav.next,
+.ca-nav-next
 {
     right: 0;
 }
 .slider .callbacks_nav.next a,
 .view .gallery .callbacks_nav.next a,
-.modal .callbacks_nav.next a
+.modal .callbacks_nav.next a,
+.ca-nav-next
+
 {
     background-position: -24px center;
 }
@@ -409,23 +421,20 @@ table.table-price td:last-child{
     background: linear-gradient(to bottom, #e4f1f5 0%,#d7e4e9 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f1f5', endColorstr='#d7e4e9',GradientType=0 ); /* IE6-9 */
 }
-.view .gallery li a{
+.view .gallery a{
     display: block;
+    height: 150px;
 }
-.view .gallery li a img{
+.view .gallery a img{
     width: 100%;
 }
 .view .gallery .gallery-slide{
     padding: 0 35px;
 }
-.view .gallery .gallery-slide li a{
-    border-radius: 10px;
-    border:1px solid #dadada;
-}
-.view .gallery .gallery-slide li a img{
+.view .gallery .gallery-slide a img{
     min-width: 100%;
 }
-.view .gallery .gallery-slide li a:hover{
+.view .gallery .gallery-slide a:hover{
     border:1px solid #2b4550;
 }
 .view .gallery h1{
@@ -433,6 +442,14 @@ table.table-price td:last-child{
 }
 .slide-side{
     position: relative;
+}
+.modal .slide-side{
+    width: 800px;
+    height: 600px;
+}
+.modal .slide-side .rhino-container{
+    width: 800px !important;
+    height: 600px !important;
 }
 .modal-body{
     background: none;
@@ -548,5 +565,27 @@ table.table-price td:last-child{
     }
 }
 .modal-dialog{
-	width: 800px;
+    width: 800px;
+}
+.submodal{
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.closeModal{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: #002330;
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 100;
+}
+.closeModal:hover{
+    text-decoration: none;
 }
